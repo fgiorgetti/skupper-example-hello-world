@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-world-backend
   name: hello-world-backend
-  namespace: west
+  namespace: east
 spec:
   replicas: 1
   revisionHistoryLimit: 10
