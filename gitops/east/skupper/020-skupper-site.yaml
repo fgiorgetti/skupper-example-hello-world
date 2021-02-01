@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  cluster-local: "true"
+  console: "true"
+  console-authentication: internal
+  console-password: "admin"
+  console-user: "admin"
+  edge: "false"
+  name: skupper-east
+  router-console: "false"
+  service-controller: "true"
+  service-sync: "true"
+kind: ConfigMap
+metadata:
+  name: skupper-site
