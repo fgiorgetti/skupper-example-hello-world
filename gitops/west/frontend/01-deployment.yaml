@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-world-frontend
+  name: hello-world-frontend
+  namespace: west
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: hello-world-frontend
+  template:
+    metadata:
+      labels:
+        app: hello-world-frontend
+    spec:
+      containers:
+      - name: hello-world-frontend
+        image: quay.io/skupper/hello-world-frontend
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 60
