@@ -5,8 +5,8 @@ metadata:
   labels:
     app: hello-world-backend
   annotations:
-    skupper.io/port: 8080
-    skupper.io/proxy: http
+    skupper.io/port: "8080"
+    skupper.io/proxy: "http"
   name: hello-world-backend
   namespace: east
 spec:
